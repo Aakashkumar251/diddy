@@ -58,3 +58,10 @@ To enhance predictive power, additional statistical features are generated durin
 ## System Pipeline
 
 ![Pipeline](images/pipeline.png)
+
+
+## Model Architecture
+
+![Architecture](images/architecture1.png)
+![Architecture](images/architecture2.png)
+
