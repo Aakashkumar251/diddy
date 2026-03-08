@@ -54,3 +54,7 @@ High dimensional feature space
 Potential nonlinear relationships between sensors
 
 To enhance predictive power, additional statistical features are generated during the feature engineering stage.
+
+## System Pipeline
+
+![Pipeline](images/pipeline.png)
