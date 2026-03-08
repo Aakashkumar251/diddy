@@ -1,42 +1,56 @@
-# IEEE SB GEHU ML Challenge – Fault Detection
 
-This project builds a machine learning model to detect faulty device states from sensor measurements.
+**Intelligent Machine Learning Framework for Fault Detection in Embedded Sensor Systems**
 
-## Features
+Overview
 
-- Advanced feature engineering
-- Spike detection
-- Robust scaling
-- LightGBM classifier
-- Threshold optimization for best F1 score
+Modern embedded systems rely on multiple sensors to monitor operational conditions such as temperature, pressure, vibration, and electrical signals. Detecting abnormal behavior early is essential to prevent system failure and enable predictive maintenance.
 
-## Dataset
+This project presents a machine learning–based fault detection framework that analyzes multivariate sensor telemetry and automatically classifies whether a device is operating normally or experiencing a fault condition.
 
-47 sensor features (F01–F47)
+The model learns patterns from 47 continuous sensor measurements and predicts device state using an advanced feature-engineered LightGBM classifier.
 
-Target:
-0 → Normal  
-1 → Faulty
+The solution was developed as part of the IEEE SB GEHU Machine Learning Challenge.
 
-## How to Run
+Problem Statement
+**In industrial and embedded environments, large volumes of sensor data are generated continuously. Traditional rule-based monitoring systems depend on manually defined thresholds and often fail to detect complex or subtle anomalies.
+**
 
-Install libraries:
+The goal of this project is to design an intelligent system capable of:
 
-pip install pandas numpy scikit-learn lightgbm
+ * Learning patterns from high-dimensional sensor data.
 
-Run:
+ * Detecting abnormal device behavior automatically.
 
-python generate_predictions.py
+ * Maintaining high prediction accuracy while minimizing false alarms.
 
-## Output
+The problem is formulated as a binary classification task.
 
-The script generates:
+Class	                       Description
+0	                           device operation
+1	                           Fault condition detected
 
-FINAL.csv
 
-Format:
+Dataset Description
+The dataset contains telemetry information from embedded monitoring systems.
 
-ID,CLASS
-1,0
-2,1
-3,0
+Training Data: 43,776 samples
+
+Testing Data: 10,944 samples
+
+Each sample contains 47 numerical features:
+
+F01 – F47: These represent sensor signals collected from the system during operation.
+
+Dataset Characteristics
+
+Multivariate sensor measurements
+
+Continuous numerical values
+
+Binary classification labels
+
+High dimensional feature space
+
+Potential nonlinear relationships between sensors
+
+To enhance predictive power, additional statistical features are generated during the feature engineering stage.
